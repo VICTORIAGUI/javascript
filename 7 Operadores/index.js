@@ -68,6 +68,8 @@ contador++; //4
 contador++; //5
 console.log(contador);
 
+// Quando colocamos os operadores após a variável, ele primeiro executa a ação do console log e depois encrementa. Por isso no exemplo abaixo o valor inicial mesmo após a encrementação ainda é um e quando iniciamos novamente o console log conseguimos ver o valor da encrementação adicionado.
+
 let contadorUm = 1;
 console.log(contadorUm++);
 console.log(contadorUm);
@@ -79,3 +81,55 @@ let calculadora = 1;
 ++calculadora; //4
 ++calculadora; //5
 console.log(calculadora);
+
+// Já quando colocamos osoperadores antes da variável ele já vai encrementar esse valor, e ele não vai ficar retido. Então quando executado o console log já nos vai ser retornado o valor atribuido.
+
+let calculadoraUm = 1;
+++calculadoraUm;
+console.log(calculadoraUm);
+
+//Operador de decremento 
+
+let calculo = 10;
+--calculo;
+console.log(calculo);
+
+/*
+Incremento = ++
+Decremento = --
+*/
+
+/* Nunca fazer 
+let contador = 1;
+console.log(contador++);
+
+Fazer:
+let contador = 1;
+++contador;
+console.log(contador)
+
+ou:
+let contador = 1;
+contador++;
+console.log(contador)
+*/
+
+// Encremento de mais de um valor 
+
+const passo = 50;
+let contadorDois = 0;
+contadorDois += passo;
+console.log(contadorDois);
+contadorDois += passo;
+console.log(contadorDois);
+contadorDois += passo;
+console.log(contadorDois);
+
+// Encremento de mais de um valor simplificado 
+
+const passoDois = 2;
+let contadorTres = 10;
+contadorTres *= passoDois;
+contadorTres *= passoDois;
+contadorTres *= passoDois;
+console.log(contadorTres);
